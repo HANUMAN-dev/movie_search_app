@@ -1,0 +1,36 @@
+<!-- src/app/dashboard/dashboard.component.html -->
+
+<div class="container">
+    <app-countdown></app-countdown>
+    <div class="d-flex justify-content-between">
+        <div class="search-bar">
+            <input [(ngModel)]="searchTerm" placeholder="Search term" class="form-control" />
+            <button (click)="onSearchby()" class="btn btn-primary">Search</button>
+        </div>
+        <div class="button-container" style="padding-left: 20px;">
+            <button (click)="clearStorage()" class="btn btn-danger">Clear Cache</button>
+        </div>
+    </div>
+
+
+    <div class="row mt-4">
+        <div class="col-md-4" *ngFor="let movie of searchedMovie; let i = index">
+            <div class="card mb-4" (click)="openMovieDialog(movie,i)">
+                <img class="card-img-top" style="height: 200px;" [src]="movie.Poster" alt="{{ movie.Title }} Poster">
+
+                <div class="card-body">
+
+                    <h2 class="card-title">{{ movie.Title }}</h2>
+
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Year:</strong> {{ movie.Year }}</li>
+                    <li class="list-group-item"><strong>Type:</strong> {{ movie.Type }}</li>
+                    <!-- Add other movie details here -->
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+</div>

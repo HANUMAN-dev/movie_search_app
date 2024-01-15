@@ -1,0 +1,23 @@
+/* src/app/movie-dialog/movie-dialog.component.scss */
+
+.dialog-movie-image {
+    width: 100%;
+    max-height: 300px;
+    /* Set a max height for the image */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the entire container */
+}
+
+mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field {
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+mat-dialog-actions {
+    justify-content: space-between;
+}

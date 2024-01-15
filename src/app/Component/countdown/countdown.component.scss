@@ -1,0 +1,36 @@
+.custom-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.card-container {
+    width: 300px;
+    /* Adjust the width as needed */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px;
+}
+
+.custom-form-field .mat-input-element {
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    /* Text color */
+}
+
+.custom-form-field .mat-form-field-label {
+    color: #3f51b5;
+    /* Label color */
+}
+
+.custom-form-field .mat-form-field-underline {
+    background-color: #3f51b5;
+    /* Underline color on focus */
+}
+
+.custom-form-field .mat-form-field-ripple {
+    background-color: #3f51b5;
+    /* Ripple color on focus */
+}

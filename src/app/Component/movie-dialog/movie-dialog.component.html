@@ -1,0 +1,25 @@
+<!-- src/app/movie-dialog/movie-dialog.component.html -->
+
+<h2 mat-dialog-title>Edit Movie Details</h2>
+<div mat-dialog-content>
+    <!-- Display the movie image at the top -->
+    <img class="dialog-movie-image" style="height: 200px;" [src]="data.Poster" alt="{{ data.Title }} Poster">
+
+    <mat-form-field>
+        <label>Name</label>
+        <input matInput [(ngModel)]="data.Title" (ngModelChange)="handleInputChange1('Title', $event)">
+    </mat-form-field>
+
+    <mat-form-field>
+        <label>Year</label>
+        <input matInput [(ngModel)]="data.Year" (ngModelChange)="handleInputChange2('Year', $event)">
+    </mat-form-field>
+
+
+    <!-- Add other editable fields as needed -->
+</div>
+<div mat-dialog-actions><button mat-button [mat-dialog-close]="data" cdkFocusInitial>Reset</button>
+    <button mat-button (click)="onSaveClick()">Save</button>
+
+
+</div>
